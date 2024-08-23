@@ -1,0 +1,87 @@
+@import "../../styles/variables"
+@import "../../styles/mixins"
+
+.savings
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 50px 0
+  color: $primary-color1
+  font-size: 24px
+
+  &-title
+    font-size: 42px
+    margin-bottom: 30px
+
+  &-table
+    width: 935px
+
+    tr
+      td
+        padding: 10px 0
+
+        input,
+        select
+          @include green-border-input
+          height: 40px
+          width: 100%
+          font-size: 20px
+
+          &:focus-visible
+            outline: none
+
+        .btn
+          @include button
+          border-radius: 20px
+
+          &:hover
+            @include green-button-hover
+
+        .btn-save,
+        .btn-edit
+          @include green-border-button
+
+        .btn-cancel,
+        .btn-delete
+          @include green-button
+
+      .title
+        width: 200px
+
+      .category
+        width: 180px
+        div
+          text-align: center
+          width: 100%
+          padding: 0 15px
+          background-color: $secondary-color1
+          color: white
+          border-radius: 15px
+          font-family: $secondary-font
+          font-size: 20px
+
+      .value
+        text-align: right
+        padding-left: 15px
+        width: 150px
+
+      .currency
+        padding-right: 15px
+        width: 100px
+
+      .value-input
+        width: 150px
+
+      .currency-input
+        max-width: 100px
+
+  .btn-add
+    width: 100%
+    font-size: 24px
+    padding: 5px 0
+    cursor: pointer
+    @include green-button
+
+    &:hover
+      @include green-button-hover

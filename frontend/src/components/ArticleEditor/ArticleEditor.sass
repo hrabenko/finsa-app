@@ -1,0 +1,65 @@
+@import "../../styles/variables"
+@import "../../styles/mixins"
+
+.article-editor
+  display: flex
+  justify-content: center
+  padding: 50px 0
+
+  .editor-container
+    max-width: 800px
+    width: 800px
+
+    .photo-block
+      display: flex
+      flex-wrap: wrap
+      .upload-image-btn
+        @include button
+        @include purple-border-button
+        margin-right: 30px
+        margin-bottom: 20px
+
+      .remove-img-btn
+        @include button
+        @include purple-button
+        margin-bottom: 20px
+
+      .article-cover
+        width: 800px
+        max-height: 400px
+        object-fit: cover
+        margin-bottom: 30px
+
+
+    .title-input
+      width: 100%
+      font-size: 28px
+      margin-bottom: 30px
+      border: 2px solid $primary-color2
+      color: $primary-color2
+      padding: 10px
+
+      &:focus-visible
+        outline: none
+
+    .react-mde
+      border: 2px solid $primary-color2
+
+    .mde-header
+      border-bottom: 1px solid $primary-color2
+      background: $secondary-color2
+
+      .mde-tabs
+        button
+          padding: 0 10px
+
+    .button
+      display: flex
+      justify-content: flex-end
+      button
+        margin-top: 30px
+        @include button
+        @include purple-button
+
+        &:hover
+          @include purple-button-hover

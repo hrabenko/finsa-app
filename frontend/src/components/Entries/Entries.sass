@@ -1,0 +1,53 @@
+@import "../../styles/variables"
+@import "../../styles/mixins"
+
+.entries
+  border: 2px solid $primary-color1
+  border-radius: 20px
+  width: 100%
+  padding: 20px
+
+  thead
+    tr
+      td
+        background-color: $primary-color1
+        color: white
+        padding: 5px
+
+  tbody
+    tr
+      td
+        border-bottom: 2px solid $primary-color1
+        padding: 5px
+
+      .btn
+        width: 20px
+        cursor: pointer
+
+        img
+          width: 20px
+
+      .category
+        width: 250px
+
+      .value
+        width: 150px
+
+      input, select
+        @include green-border-input
+        width: 100%
+        height: 30px
+        font-size: 16px
+
+        &:focus-visible
+          outline: none
+
+      .btn-add
+        @include green-button
+        width: 100%
+        height: 30px
+        font-size: 20px
+        cursor: pointer
+
+        &:hover
+          @include green-button-hover

@@ -1,0 +1,94 @@
+@import "../../styles/mixins"
+
+.creating
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  position: fixed
+  background-color: rgba(0, 0, 0, 0.5)
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .creating-form
+    padding: 20px
+    background-color: white
+    width: 500px
+
+    .input-control
+      display: flex
+      flex-direction: column
+      margin-bottom: 20px
+
+      label
+        font-size: 24px
+        font-weight: 500
+
+      input, select
+        @include green-border-input
+        height: 40px
+        font-size: 18px
+
+      .contributors-input
+        display: flex
+        width: 100%
+
+        input
+          width: calc(100% - 75px)
+
+        button
+          @include green-button
+          width: 75px
+          font-size: 16px
+          cursor: pointer
+
+          &:hover
+            @include green-button-hover
+
+      .contributors-list
+        display: flex
+        margin-top: 10px
+        gap: 5px
+        flex-wrap: wrap
+
+        div
+          border: 1px solid $primary-color1
+          border-radius: 10px
+          padding: 5px
+          display: flex
+          gap: 5px
+
+          .username
+            font-size: 16px
+
+          img
+            width: 15px
+            cursor: pointer
+
+    .choose-period
+      display: flex
+      flex-direction: row
+      gap: 20px
+      input
+        width: 50%
+
+    .hidden
+      display: none
+
+    .buttons
+      display: flex
+      gap: 30px
+      .btn
+        @include button
+
+        &:hover
+          @include green-button-hover
+
+      .btn-save
+        @include green-border-button
+
+      .btn-cancel
+        @include green-button

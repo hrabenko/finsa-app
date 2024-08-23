@@ -1,0 +1,45 @@
+@import './variables'
+
+@mixin green-border-input()
+  border: 2px solid $primary-color1
+  color: $primary-color1
+  padding: 5px 10px
+
+@mixin button()
+  width: 150px
+  height: 40px
+  font-size: 18px
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+
+@mixin green-button()
+  background-color: $primary-color1
+  color: white
+  border: none
+
+@mixin green-border-button()
+  border: 3px solid $primary-color1
+  color: $primary-color1
+  background-color: inherit
+
+@mixin green-button-hover()
+  background-color: $secondary-color1
+  border: none
+  color: white
+
+@mixin purple-button()
+  background-color: $primary-color2
+  color: white
+  border: none
+
+@mixin purple-border-button()
+  border: 3px solid $primary-color2
+  color: $primary-color2
+  background-color: inherit
+
+@mixin purple-button-hover()
+  background-color: $secondary-color2
+  border: none
+  color: white

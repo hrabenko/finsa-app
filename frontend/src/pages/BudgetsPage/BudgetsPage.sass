@@ -1,0 +1,53 @@
+@import "../../styles/variables"
+@import "../../styles/mixins"
+
+.budgets
+  padding: 50px 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: $primary-color1
+
+  &-title
+    font-size: 42px
+    margin-bottom: 30px
+
+  &-list
+    .budget
+      width: 500px
+      background-color: $primary-color1
+      color: white
+      padding: 20px
+      border-radius: 20px
+      margin-bottom: 20px
+
+      &-main-info
+        margin-bottom: 40px
+
+        .budget-name
+          font-size: 30px
+          font-family: $secondary-font
+        .budget-period
+          font-size: 14px
+        .trash-icon
+          width: 20px
+
+      &-expenses-income
+        display: flex
+        gap: 30px
+        font-weight: 600
+        .expenses,
+        .income
+          font-weight: 400
+
+  .btn-create
+    @include green-button
+    border-radius: 20px
+    border: none
+    width: 500px
+    height: 50px
+    font-size: 20px
+
+    &:hover
+      @include green-button-hover

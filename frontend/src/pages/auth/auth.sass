@@ -1,0 +1,73 @@
+@import "../../styles/variables"
+.auth-form
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 20px 0
+
+  form
+    border: 3px solid $primary-color2
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    color: $primary-color2
+    width: 450px
+    padding: 30px 40px
+    border-radius: 20px
+
+    .form
+      &-title
+        font-size: 36px
+        font-family: $secondary-font
+        margin-bottom: 20px
+
+      &-control
+        display: flex
+        flex-direction: column
+        margin-bottom: 20px
+        width: 100%
+
+        .label
+          margin-bottom: 10px
+          font-size: 16px
+
+        .input
+          width: 100%
+          height: 50px
+          border-radius: 50px
+          border: 3px solid $primary-color2
+          padding: 5px 20px
+          font-size: 16px
+          color: $primary-color2
+
+          &:focus-visible
+            outline: none
+
+      &-button
+        background-color: $primary-color2
+        color: white
+        width: 100%
+        height: 50px
+        border: none
+        border-radius: 50px
+        font-size: 20px
+        font-family: $secondary-font
+        margin-top: 10px
+        cursor: pointer
+
+        &:hover
+          background-color: $secondary-color2
+
+    .link
+      width: 100%
+      display: flex
+      justify-content: flex-end
+      margin-top: 10px
+      margin-right: 10px
+
+      a
+        color: $primary-color2
+
+        &:hover
+          text-decoration: underline

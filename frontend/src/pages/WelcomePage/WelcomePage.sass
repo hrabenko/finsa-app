@@ -1,0 +1,69 @@
+@import "../../styles/variables"
+@import "../../styles/mixins"
+
+.welcome
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 50px
+  padding: 40px 50px 0
+
+  .image-container,
+  .action-container
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  &-image
+    width: 100%
+    max-width: 500px
+
+  &-title
+    font-size: 52px
+    color: $primary-color1
+    font-weight: 700
+    text-align: center
+    margin-bottom: 50px
+
+  .btn
+    a
+      border-radius: 50px
+      height: 70px
+      width: 400px
+      cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 28px
+      font-family: $secondary-font
+
+    &-login
+      a
+        margin-bottom: 20px
+        @include green-border-button
+
+      &:hover
+        a
+          @include green-button-hover
+
+    &-signup
+      a
+        @include green-button
+
+      &:hover
+        a
+          @include green-button-hover
+
+    &-blog
+      a
+        @include purple-button
+
+      &:hover
+        a
+          @include purple-button-hover
+
+  .btn-divider
+    border-top: 3px dashed $primary-color1
+    margin: 30px 0
+    width: 400px

@@ -1,0 +1,49 @@
+@import "../../styles/variables"
+@import "../../styles/mixins"
+
+.modal-window
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  position: fixed
+  background-color: rgba(0, 0, 0, 0.5)
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .modal-container
+    background-color: white
+    max-width: 100%
+    width: 400px
+    height: 250px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 20px
+
+    .modal-text
+      font-size: 24px
+      margin-bottom: 20px
+      color: $primary-color1
+      font-weight: 500
+      text-align: center
+
+    .modal-buttons
+      display: flex
+      gap: 30px
+
+      .btn
+        @include button
+
+        &-confirm
+          @include green-border-button
+
+        &-cancel
+          @include green-button
+
+        &:hover
+          @include green-button-hover
